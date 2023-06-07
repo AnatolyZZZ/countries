@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { setAll } from './actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { Header } from './components/Header';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const dispatch = useDispatch(); 
+  const isDark = useSelector((state) => state.darkMode);
+  const body = document.querySelector('body');
+  
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch('https://restcountries.com/v3.1/all');
+      const countries = await res.json();
+      if (!ignore) {
+        dispatch(setAll(countries));
+      }
+    }
+    let ignore = false;
+    getData();
+    return () => ignore = true
+  }, []);
+
+  useEffect(()=> {
+    isDark ? body.classList.add('dark') : body.classList.remove('dark');
+  }, [isDark])
+
+  return (<>
+      <Header/>
+   </>
   );
 }
 
