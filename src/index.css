@@ -36,6 +36,13 @@ code {
 .align-center {
   align-items: center;
 }
+.hidden {
+  display: none;
+}
+section {
+  background-color: var(--background-color);
+  padding: 3rem 0;
+}
 
 @media (min-width : 900px) {
   .container {

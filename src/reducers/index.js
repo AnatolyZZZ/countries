@@ -3,7 +3,7 @@ import {SET_SEARCH, SET_REGION, SET_ALL, TOGGLE_DARK} from '../actions/index.js'
 const initialState = {
     allCountries : [],
     searchField : '',
-    filterRegion : '',
+    filterRegion : 'Filter by Region',
     darkMode : false
 }
 

@@ -1,0 +1,8 @@
+@media( min-width : 900px) {
+    .two-inputs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10rem
+    }
+}

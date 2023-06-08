@@ -1,0 +1,25 @@
+.country-filter, .dropdown-menu {
+    background-color: var(--element-color);
+    border-radius: 5px;
+    font-size: 0.875rem;
+}
+
+.country-filter {
+    width: 60%;
+    max-width: 12rem;
+    position: relative;
+    color: var(--text-color);
+    padding: 0 1.5em;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 3.7rem;
+    left: 0;
+    width: 100%;
+    padding: 1em 0;
+}
+
+.dropdown-item {
+    padding: 0.5em 1.5em;
+}

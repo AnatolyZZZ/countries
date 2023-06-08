@@ -1,0 +1,33 @@
+.search-input, .search {
+    height: 3rem;
+    background-color: var(--element-color);
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+}
+.search {
+    margin-bottom: 3rem;
+    gap: 1em;
+    padding: 0 1.5em;
+    color: var(--input-color);
+}
+.search-input {
+    width: 100%;
+    color: var(--input-color);
+}
+.search-input::placeholder {
+    color: var(--input-color);
+    font-size: 0.875rem;
+}
+.search-input:focus {
+    outline: 0;
+}
+  
+
+@media (min-width : 900px) {
+    .search {
+        margin-bottom: 0;
+        width : 100%;
+    }
+    
+}
