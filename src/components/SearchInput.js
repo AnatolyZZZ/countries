@@ -15,6 +15,7 @@ export const SearchInput = (props) => {
                 placeholder="Search for a country..."
                 onChange={(e) => dispatch(setSearch(e.target.value))}
                 className="search-input"
+                value={reduxValue}
             />
         </div>
             

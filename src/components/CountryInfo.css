@@ -1,0 +1,35 @@
+.button {
+    /* padding: 0.3em 1.5em; */
+    display: flex;
+    box-shadow: var(--shadow);
+    border-radius: 3px;
+    width: 8rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--text-color);
+    background: var(--element-color);
+}
+.neighbors {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7em;
+    align-items: center;
+}
+.country-info {
+    margin-top: 3rem;
+}
+
+@media (min-width: 900px) {
+    .flex-wide {
+        display: flex;
+        justify-content: space-between;
+        gap: 10%;
+        align-items: flex-start;
+    }
+    .info-flag {
+        width: 50%;
+    }
+}

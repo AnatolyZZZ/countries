@@ -9,6 +9,7 @@ body {
   --text-color: hsl(200, 15%, 8%);
   --element-color: hsl(0, 0%, 100%);
   --input-color: hsl(0, 0%, 52%);
+  --shadow:  0 0 5px 0 hsl(0, 0%, 75%);
 }
 
 body.dark {
@@ -16,11 +17,16 @@ body.dark {
   --text-color: hsl(0, 0%, 100%);
   --element-color: hsl(209, 23%, 22%);
   --input-color: hsl(0, 0%, 100%);
+  --shadow: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {

@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
+import './Countries.css'
 
 // const throttele = (fn, t) => {
 //     let blockUntil = -1;
@@ -46,16 +47,22 @@ export const Countries = (props) => {
     const filterByName = (elt) => {
         return elt.name.common.toLowerCase().includes(searchField.toLowerCase())
     }
+    const filterByRegion = (elt) => {
+        return filterRegion === "Filter by Region" ? true : elt.region === filterRegion
+    }
     
     const filterCards = () => {
        // do we need this spread?
-        setDebounced(...allCountries.filter(filterByName))
+        setDebounced(...allCountries.filter(filterByRegion).filter(filterByName))
         // setTrottled(...allCountries.filter(filterByName))
     }
     useEffect (()=>{setDisplay(allCountries)}, [allCountries])
     useEffect (()=>{filterCards()},[searchField, filterRegion, allCountries]);
 
-    return <div className="country-container">
-        {displayedCountries.map((elt, idx) => {return <Card country={elt} key={idx}/>})}
-    </div>
+    return <section>
+                <div className="country-container container">
+                    {displayedCountries.map((elt, idx) => {return <Card country={elt} key={idx}/>})}
+                </div>
+            </section>
+    
 }
