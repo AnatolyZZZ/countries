@@ -42,7 +42,7 @@ export const Countries = (props) => {
 
     const [displayedCountries, setDisplay] = useState(allCountries);
     // const setTrottled = throttele(setDisplay, 2000);
-    const setDebounced = debounce(setDisplay, 350)
+    const setDebounced = debounce(setDisplay, 700)
 
     const filterByName = (elt) => {
         return elt.name.common.toLowerCase().includes(searchField.toLowerCase())

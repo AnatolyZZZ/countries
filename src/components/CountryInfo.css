@@ -24,6 +24,9 @@
     gap: 0.7em;
     align-items: center;
 }
+.border {
+    width: 900px;
+}
 .country-info {
     margin-top: 3rem;
 }
@@ -53,5 +56,8 @@
     }
     .country-page .container {
         width: 85%
+    }
+    .border {
+        width: auto;
     }
 }

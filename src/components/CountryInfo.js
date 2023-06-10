@@ -65,8 +65,9 @@ export const CountryInfo = (props) => {
                             </p>
                         </div>
                     </div>
-                    <span className='header'>Border Countries: </span>
+                    
                     {country.borders ? <div className="neighbors">
+                    <span className='header border'>Border Countries: </span>
                         {country.borders.map((elt, idx) => <div 
                                                             className="button" 
                                                             key={idx}
