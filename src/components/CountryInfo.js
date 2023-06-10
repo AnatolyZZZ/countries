@@ -20,7 +20,7 @@ export const CountryInfo = (props) => {
 
     useEffect(()=>window.scrollTo(0,0),[])
     return country ? 
-    <section>
+    <section className="country-page">
         <div className="container">
             <div className="button" onClick={(e) => navigate('/')}><FontAwesomeIcon icon={faArrowLeftLong} />Back</div>
             <div className="country-info flex-wide">

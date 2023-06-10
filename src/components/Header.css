@@ -2,6 +2,7 @@ header {
     background-color: var(--element-color);
     color: var(--text-color);
     padding: 0.8em 0;
+    box-shadow: var(--header-shadow);
 }
 
 header h3 {

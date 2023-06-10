@@ -1,3 +1,9 @@
+.country-page .container {
+    width: 80%
+}
+.first-block, .second-block {
+    margin-bottom: 4rem;
+}
 .button {
     /* padding: 0.3em 1.5em; */
     display: flex;
@@ -21,6 +27,16 @@
 .country-info {
     margin-top: 3rem;
 }
+.country-page .country-name {
+    font-size: 2rem;
+    margin-top: 0.3em;
+}
+.info-flag {
+    box-shadow: var(--down-shadow);
+}
+.data {
+    margin: 0.5em 0;
+}
 
 @media (min-width: 900px) {
     .flex-wide {
@@ -30,6 +46,12 @@
         align-items: flex-start;
     }
     .info-flag {
-        width: 50%;
+        width: 45%;
+    }
+    .country-details {
+        width: 55%;
+    }
+    .country-page .container {
+        width: 85%
     }
 }
