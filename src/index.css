@@ -10,7 +10,7 @@ body {
   --element-color: hsl(0, 0%, 100%);
   --input-color: hsl(0, 0%, 52%);
   --shadow:  0 0 5px 0 hsl(0, 0%, 75%);
-  --down-shadow : 0 5px 3px -5px hsl(0, 0%, 55%);
+  --down-shadow : 0 5px 3px -5px hsl(0, 0%, 65%);
   --right-shadow : 8px 0 5px -5px hsl(0, 0%, 75%);
   --header-shadow : inset 0 -5px 3px -5px hsl(0, 0%, 90%);
 }

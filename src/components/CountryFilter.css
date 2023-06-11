@@ -10,7 +10,8 @@
     position: relative;
     color: var(--text-color);
     padding: 0 1.5em;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow), var(--down-shadow);
+    cursor: pointer;
 }
 
 .dropdown-menu {

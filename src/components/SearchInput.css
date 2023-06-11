@@ -8,13 +8,14 @@
 .search {
     margin-bottom: 3rem;
     gap: 1em;
-    padding: 0 1.5em;
+    padding-left: 1.5em;
     color: var(--input-color);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow), var(--down-shadow);
 }
 .search-input {
     width: 100%;
     color: var(--input-color);
+    font-size: 1rem;
 }
 .search-input::placeholder {
     color: var(--input-color);
