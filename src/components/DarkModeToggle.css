@@ -4,4 +4,5 @@
 .d-toggle {
     cursor: pointer;
     font-weight: 600;
+    white-space: nowrap;
 }
