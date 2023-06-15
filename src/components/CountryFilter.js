@@ -18,10 +18,15 @@ export const CountryFilter = (props) => {
     const uniqueRegionSet = allCountries.reduce((prev, curr) => prev.add(curr.region), new Set());
     const uniqueRegionArray = Array.from(uniqueRegionSet);
 
+
     useEffect (()=>{
         // have to refresh after each change in filterRegion, and after downloading al countries
         const idx = uniqueRegionArray.indexOf(filterRegion);
-        uniqueRegionArray.splice(idx, 1);
+
+        if (idx !== -1) {
+            uniqueRegionArray.splice(idx, 1);
+        }
+
         if (filterRegion !== "Filter by Region") {
             uniqueRegionArray.push('Filter by Region')
         }

@@ -9,12 +9,16 @@ export const CountryInfo = (props) => {
     const countries = useSelector((state) => state.allCountries);
     const {id} = useParams();
     const country = countries.find(elt => elt.cca3 === id);
-    let languages='', numberString='', currencies='';
+    let languages='', numberString='', currencies='', nativename='';
     // console.log(country)
     if (country) {
         languages = Object.values(country.languages).join(', ');
         numberString = Number(country.population).toLocaleString('en-EN');
-        currencies = Object.values(Object.values(country.currencies).map(elt => elt.name)).join(', ')
+        currencies = Object.values(Object.values(country.currencies).map(elt => elt.name)).join(', ');
+        // console.log(Object.entries(country.name.nativeName)[0][1].common)
+        if (Object.entries(country.name.nativeName).length > 0) {
+            nativename = Array.from(Object.entries(country.name.nativeName))[0][1].common
+        }
     }
     const navigate = useNavigate();
 
@@ -31,7 +35,7 @@ export const CountryInfo = (props) => {
                         <div className="first-block">
                             <p className="data">
                                 <span className='header'>Native Name: </span>
-                                <span className='info'>{Array.from(Object.entries(country.name.nativeName))[0][1].common}</span>
+                                <span className='info'>{nativename}</span>
                             </p>
                             <p className="data">
                                 <span className='header'>Population: </span>
