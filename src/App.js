@@ -15,20 +15,24 @@ function App() {
   
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch('https://restcountries.com/v3.1/all?fields=name,population,languages,flags,currencies,region,subregion,capital,tld,borders,cca3');
-      const countries = await res.json();
-      if (!ignore) {
-        dispatch(setAll(countries));
+      try {
+        const res = await fetch('https://restcountries.com/v3.1/all?fields=name,population,languages,flags,currencies,region,subregion,capital,tld,borders,cca3');
+        const countries = await res.json();
+        if (!ignore) {
+          dispatch(setAll(countries));
+        }
+      } catch (error) {
+        console.log('error occured', error)
       }
     }
     let ignore = false;
     getData();
     return () => ignore = true
-  }, []);
+  }, [dispatch]);
 
   useEffect(()=> {
     isDark ? body.classList.add('dark') : body.classList.remove('dark');
-  }, [isDark])
+  }, [isDark, body.classList])
 
   return (<>
       <Header/>

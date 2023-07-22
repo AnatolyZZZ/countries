@@ -16,6 +16,7 @@ export const SearchInput = (props) => {
                 onChange={(e) => dispatch(setSearch(e.target.value))}
                 className="search-input"
                 value={reduxValue}
+                id="main-search-input"
             />
         </div>
             

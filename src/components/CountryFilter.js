@@ -14,12 +14,13 @@ export const CountryFilter = (props) => {
     // for maping througth
     const [regions, setRegions] = useState([]);
 
-    // extract all unique regions from all countries array
-    const uniqueRegionSet = allCountries.reduce((prev, curr) => prev.add(curr.region), new Set());
-    const uniqueRegionArray = Array.from(uniqueRegionSet);
+   
 
 
     useEffect (()=>{
+         // extract all unique regions from all countries array
+        const uniqueRegionSet = allCountries.reduce((prev, curr) => prev.add(curr.region), new Set());
+        const uniqueRegionArray = Array.from(uniqueRegionSet);
         // have to refresh after each change in filterRegion, and after downloading al countries
         const idx = uniqueRegionArray.indexOf(filterRegion);
 

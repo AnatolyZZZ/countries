@@ -15,9 +15,9 @@ export const CountryInfo = (props) => {
         languages = Object.values(country.languages).join(', ');
         numberString = Number(country.population).toLocaleString('en-EN');
         currencies = Object.values(Object.values(country.currencies).map(elt => elt.name)).join(', ');
-        // console.log(Object.entries(country.name.nativeName)[0][1].common)
+        // console.log('native name', (Object.values(country.name.nativeName)).map(elt => elt))
         if (Object.entries(country.name.nativeName).length > 0) {
-            nativename = Array.from(Object.entries(country.name.nativeName))[0][1].common
+            nativename = Object.values(country.name.nativeName).map(elt => elt.common).join(' | ')
         }
     }
     const navigate = useNavigate();
@@ -57,7 +57,7 @@ export const CountryInfo = (props) => {
                         <div className="second-block">
                             <p className="data">
                                 <span className='header'>Top Level Domain: </span>
-                                <span className='info'>{country.tld}</span>
+                                <span className='info'>{country.tld.join(' | ')}</span>
                             </p>
                             <p className="data">
                                 <span className='header'>Currencies: </span>
